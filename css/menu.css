@@ -1,0 +1,360 @@
+/*
+------------------- MENU PRINCIPAL DESKTOP -------------------
+*/
+.navegacao { /* container geral */
+	background: #4eb4af;
+	display: block;
+	float: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 2.1rem;
+	height: 48px;
+	letter-spacing: normal;
+	line-height: 2rem;
+	margin: 0 auto;
+	max-height: 48px;
+	max-width: 2000px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 200 !important;
+}
+.navegacao ul { /* container centralizado */
+	display: flex;
+	flex-wrap: wrap;
+	float: none;
+	height: 66px;
+	justify-content: center;
+	list-style: none;
+	margin: 0 auto;
+	max-width: 1140px;
+	padding: 0 2%;
+	position: relative;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: auto;
+	-webkit-margin-end: auto;
+	-webkit-padding-start: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+}
+.navegacao ul li { /* item */
+	display: inline-block;
+	position: relative;
+}
+.navegacao ul li a { /* menu link */
+	color: #ffffff;
+	display: block;
+	margin: 0;
+	padding: 15px 11px;
+	position: relative;
+	text-decoration: none;
+}
+.navegacao ul li:first-child a { /* retirando margem esquerda primeiro item */
+	margin-left: 0 !important;
+}
+.navegacao ul li:last-child a { /* retirando margem direita ultimo item */
+	margin-right: 0 !important;
+}
+.navegacao ul li a:hover,  /* menu link hover */ .navegacao ul li a:focus { /* menu link focus */
+	color: #388a9b;
+	outline: none !important;
+}
+
+/*
+-------------- MENU PRINCIPAL DESKTOP TRANSICAO SCROLL -------------
+*/
+@media screen and (min-width:768px) {
+.navegacao-fixa {
+	background: #4eb4af;
+	font-size: 1.7rem;
+	height: 34px;
+	left: 0;
+	position: fixed;
+	top: 0;
+	transition: all .3s;
+	-moz-transition: all .3s;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	width: 100%;
+}
+.navegacao-fixa ul li a {
+	margin: 0;
+	padding: 7px 11px;
+}
+}
+/*
+-------------------- MENU DE PAGINAS INTERNAS ----------------------
+*/
+.menu-interno {
+	margin: 0;
+	padding: 0;
+	padding-right: 15px;
+}
+.menu-interno ul {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.2rem;
+	list-style: none;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: auto;
+	-webkit-margin-end: auto;
+	-webkit-padding-start: 0;
+}
+.menu-interno ul li {
+	border-bottom: dotted 1px #969BC1;
+	margin: 2px 0;
+}
+.menu-interno ul li a {
+	color: #008b9d;
+	display: block;
+	padding: 2px 4px;
+	width: 100%;
+}
+.menu-interno ul li a:hover, .menu-interno ul li a:focus {
+	background: #4eb4af;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*
+----------------- MENU AJUSTES DE MEDIA QUERIES ----------------
+*/
+@media screen and (max-width:1160px) {
+.navegacao {
+	font-size: 2rem;
+}
+.navegacao ul li a { /* menu link */
+	padding-left: 10px;
+	padding-right: 10px;
+}
+}
+
+@media screen and (max-width:1046px) {
+.navegacao { /* container geral */
+	font-size: 1.6rem;
+}
+.navegacao ul li a { /* menu link */
+	padding-left: 11px;
+	padding-right: 11px;
+}
+}
+
+@media screen and (max-width:882px) {
+.navegacao { /* container geral */
+	font-size: 1.5rem;
+}
+.navegacao ul li a { /* menu link */
+	padding-left: 7px;
+	padding-right: 7px;
+}
+}
+@media screen and (max-width:780px) and (min-width:768px) {
+.navegacao { /* container geral */
+	font-size: 1.4rem;
+}
+}
+/*
+------------------------- MENU MOBILE --------------------------
+*/
+@media screen and (max-width: 767px) and (min-width: 176px) {
+.navegacao {
+	display: none;
+}
+.modaal-content-container .lista-menu a {
+	color: #4eb4af;
+	font-weight: 400;
+}
+/* menu movel */
+.lista-menu {
+	list-style: none;
+	margin-bottom: 0px;
+	margin-top: 30px;
+	padding-left: 0px;
+	text-align: center;
+}
+.lista-menu li a {
+	color: #0067a1;
+	font-family: 'Raleway', sans-serif;
+	font-size: 2.3rem;
+	font-weight: 800;
+	display: block;
+	letter-spacing: -.02rem;
+	line-height: 4rem;
+	margin-top: .2rem;
+	padding: .01rem 1rem;
+	text-shadow: 0.5px 0.866px 1px rgba(0, 0, 0, 0.11);
+	vertical-align: middle;
+}
+.lista-menu li a:hover {
+	background: #62c300;
+	color: #ffffff;
+	text-decoration: none;
+}
+/* botao abrir menu*/
+.icone-menu {
+	background: #388a9b;
+	border-radius: 100%;
+	color: #fff;
+	cursor: pointer;
+	height: 50px;
+	opacity: 1;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	transition: all 0.2s ease-in-out;
+	width: 50px;
+}
+.icone-menu:focus, .menu-abre:hover {
+	background: #afb7bc;
+	color: #ffffff;
+	outline: none;
+}
+.icone-menu:focus:before,
+.icone-menu:focus:after,
+.icone-menu:hover:before,
+.icone-menu:hover:after {
+	background: transparent;
+}
+.icone-menu span {
+	border: 0 !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px !important;
+	overflow: hidden;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+}
+.icone-menu:before {
+	content: '\f0c9';
+	display: block;
+	font-family: 'FontAwesome';
+	font-size: 3rem;
+	height: 22px;
+	left: 12px;
+	position: absolute;
+	top: 9px;
+	width: 4px;
+}
+.icone-menu:after {
+	content:'MENU';
+	font-family: 'Roboto', sans-serif;
+	font-size: .9rem;
+	font-weight: 500;
+	height: 8px;
+	left: 12px;
+	position: absolute;
+	top: 7px;
+	width: 4px;
+}
+}
+/*
+------------------------- pagina institucional -------------------------
+*/
+.pg-institucional .navegacao ul li .menu-institucional {
+	color: #388a9b;
+	position: relative;
+}
+.pg-institucional .modaal-content-container a.menu-institucional {
+	background: #62c300;
+	color: #ffffff;
+	pointer-events: none;
+}
+/*
+------------------------- pagina halitose -------------------------
+*/
+.pg-halitose .navegacao ul li .menu-halitose {
+	color: #388a9b;
+	position: relative;
+}
+.pg-halitose .modaal-content-container a.menu-halitose {
+	background: #62c300;
+	color: #ffffff;
+	pointer-events: none;
+}
+/*
+------------------------- pagina associe-se -------------------------
+*/
+.pg-associese .navegacao ul li .menu-associese {
+	color: #388a9b;
+	position: relative;
+}
+.pg-associese .modaal-content-container a.menu-associese {
+	background: #62c300;
+	color: #ffffff;
+	pointer-events: none;
+}
+/*
+------------------------- pagina profissionais -------------------------
+*/
+.pg-profissionais .navegacao ul li .menu-profissionais {
+	color: #388a9b;
+	position: relative;
+}
+.pg-profissionais .modaal-content-container a.menu-profissionais {
+	background: #62c300;
+	color: #ffffff;
+	pointer-events: none;
+}
+/*
+------------------------- pagina sos -------------------------
+*/
+.pg-sos .navegacao ul li .menu-sos {
+	color: #388a9b;
+	position: relative;
+}
+.pg-sos .modaal-content-container a.menu-sos {
+	background: #62c300;
+	color: #ffffff;
+	pointer-events: none;
+}
+/*
+------------------------- pagina eventos -------------------------
+*/
+.pg-eventos .navegacao ul li .menu-eventos {
+	color: #388a9b;
+	position: relative;
+}
+.pg-eventos .modaal-content-container a.menu-eventos{
+	background: #62c300;
+	color: #ffffff;
+	pointer-events: none;
+}
+/*
+------------------------- pagina fique por dentro -------------------------
+*/
+.pg-fiquepordentro .navegacao ul li .menu-fiquepordentro {
+	color: #388a9b;
+	position: relative;
+}
+.pg-fiquepordentro .modaal-content-container a.menu-fiquepordentro {
+	background: #62c300;
+	color: #ffffff;
+	pointer-events: none;
+}
+/*
+------------------------- MENU INTERNO NO MOBILE --------------------------
+*/
+.st-pusher {
+	overflow-y: auto;
+}
+.st-menu {
+	background: #008b9d;
+}
+.st-menu-pg {
+	color: #62c300;
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 0;
+	padding: 1rem;
+	text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+.st-menu-local {
+	color: #ffffff;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1rem;
+}
